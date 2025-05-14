@@ -7,7 +7,7 @@ import numpy as np
 from util import classify, set_background
 
 
-set_background('../images/streamlit.png')
+set_background('images/streamlit.png')
 
 # set title
 st.markdown("<h1 style='text-align: center;'> 🦴 Bone Fracture Detection</h1>", unsafe_allow_html=True)
@@ -28,7 +28,7 @@ Leveraging transfer learning with pre-trained convolutional neural networks, the
 file = st.file_uploader('Please upload a  X-ray image to predict if the bone is fractured.', type=['jpeg', 'jpg', 'png'])
 
 # load classifier
-model = load_model('../models/best_model_resnet.h5')
+model = load_model('models/best_model_resnet.h5')
 
 # display image
 if file is not None:

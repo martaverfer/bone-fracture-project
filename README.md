@@ -1,5 +1,9 @@
 # Bone Fracture Detection in X-Ray Images Using Pre-Trained CNNs
 
+<p align="center">
+  <img src="images/StreamlitApp.png" alt="X-ray Preview" width="900"/>
+</p>
+
 ## Overview
 
 Fractures are a common clinical problem, and **radiographic imaging (X-rays)** remains the most accessible and widely used diagnostic tool for detecting them. Manual interpretation of X-rays can be time-consuming and subject to human error, especially when the fracture is subtle or the image quality is poor. 
@@ -8,7 +12,7 @@ This project aims to automate the **binary classification of bone X-rays** into:
 - **Fractured**
 - **Not Fractured**
 
-Using **deep learning and transfer learning** techniques. We leverage the power of pre-trained convolutional neural networks to achieve high accuracy in fracture detection from raw X-ray images.
+Using **deep learning and transfer learning** techniques. We leverage the power of pre-trained convolutional neural networks to achieve high accuracy in fracture detection from raw X-ray images. Additionally, a **Streamlit web application** was developed to make the model predictions interactive and accessible, allowing users to upload X-ray images and receive predictions in real time.
 
 ## Dataset
 
@@ -42,7 +46,6 @@ We implemented and compared two powerful **transfer learning** architectures usi
 - Cons: More computationally expensive
 
 > ✅ **Best results were obtained with ResNet50**, achieving **98% test accuracy**, significantly outperforming MobileNetV2.
-
 
 ## Workflow
 
@@ -80,6 +83,19 @@ Two custom models were built using transfer learning:
 - Confusion matrix and classification report on test set
 - Sample predictions visualized with matplotlib
 
+## 🚀 Streamlit Web Application
+
+A user-friendly Streamlit application has been developed to facilitate the upload and prediction process. Users can:
+
+- Upload `.jpg`, `.jpeg`, or `.png` X-ray images
+- Receive real-time predictions indicating whether the bone is fractured
+
+To run the application locally:
+
+```bash
+streamlit run app.py
+```
+
 ## 📊 Results
 
 ### ResNet50 **confusion matrix** after fine tuning:
@@ -94,10 +110,9 @@ Two custom models were built using transfer learning:
 
 ## Conclusion
 
-This project demonstrates that **transfer learning**, particularly with deep architectures like **ResNet50**, is highly effective for detecting fractures in X-ray images. With minimal preprocessing and moderate training effort, our model achieves **state-of-the-art accuracy (98%)** on a real-world medical imaging dataset.
+This project demonstrates how **transfer learning** using state-of-the-art CNN architectures—particularly **ResNet50**—can effectively detect fractures in X-ray images with **up to 98% test accuracy**. Our approach combines model interpretability, performance, and usability.
 
-This solution can potentially:
-- Assist radiologists in preliminary screenings
-- Serve as a tool for faster diagnosis in low-resource settings
-- Be extended to multi-class classification for regional fracture identification
+Beyond the notebook environment, the solution was deployed through a **Streamlit app** for hands-on image upload and prediction. This interactive tool allows clinicians, students, and developers to test the model directly and observe its output—bridging the gap between model development and real-world usability.
+
+The combination of accuracy and user accessibility makes this a strong foundation for future clinical decision support tools and showcases the real impact of deep learning in healthcare applications.
 
