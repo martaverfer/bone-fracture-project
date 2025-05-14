@@ -84,7 +84,9 @@ Two custom models were built using transfer learning:
 
 ### ResNet50 **confusion matrix** after fine tuning:
 
-![Confusion Matrix](images/confusion_matrix_resnet.png)
+<p align="center">
+  <img src="./images/confusion_matrix_resnet.png" alt="Confusion Matrix" width="600"/>
+</p>
 
 ### Predictions on Test Data:
 
