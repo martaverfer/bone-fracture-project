@@ -88,12 +88,20 @@ Two custom models were built using transfer learning:
 A user-friendly Streamlit application has been developed to facilitate the upload and prediction process. Users can:
 
 - Upload `.jpg`, `.jpeg`, or `.png` X-ray images
-- Receive real-time predictions indicating whether the bone is fractured
+- Receive **real-time predictions** indicating whether the bone is fractured
 
-To run the application locally:
+### 🔗 Try it online
+
+You can access the app directly via Streamlit Cloud:
+
+👉 [**Bone Fracture Web App**](https://bone-fracture-app.streamlit.app/)
+
+### 💻 Run locally
+
+If you'd prefer to run it on your machine, clone the repository and run:
 
 ```bash
-streamlit run app.py
+streamlit run app/main.py
 ```
 
 ## 📊 Results
